@@ -4,698 +4,557 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABM Formation — École de Conduite de Travaux BTP — Île-de-France</title>
-  <meta name="description" content="ABM Formation forme les conducteurs de travaux et coordinateurs OPC de demain. Formation en alternance — Titre Professionnel TP-01337 CDTBGO Niveau 5 — Île-de-France. Formateurs issus du terrain BTP.">
-  <meta name="keywords" content="formation conducteur de travaux BTP, école conducteur travaux IDF, formation coordination OPC, formation MOEX chantier, TP-01337 alternance, école BTP Île-de-France, formation gestion chantier, conducteur travaux gros oeuvre">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjMEQxQjNFIi8+CiAgPHJlY3QgeD0iMCIgeT0iMjciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzIiBmaWxsPSIjQzg5MjJBIi8+CiAgPHRleHQgeD0iMTYiIHk9IjIwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjkwMCIgZmlsbD0iI0M4OTIyQSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QUJNPC90ZXh0Pgo8L3N2Zz4=">
+  <meta name="description" content="ABM Formation forme les conducteurs de travaux BTP en alternance en Île-de-France. Titre Professionnel TP-01337 CDTBGO Niveau 5. Formateurs issus du terrain.">
+  <meta name="keywords" content="formation conducteur de travaux BTP, école conducteur travaux IDF, formation OPC MOEX, TP-01337 alternance, école BTP Île-de-France">
   <meta property="og:title" content="ABM Formation — École de Conduite de Travaux BTP — Île-de-France">
-  <meta property="og:description" content="ABM Formation forme les conducteurs de travaux BTP de demain. Titre Professionnel TP-01337 CDTBGO — Niveau 5 — Alternance — Formateurs terrain — Île-de-France.">
+  <meta property="og:description" content="ABM Formation forme les conducteurs de travaux BTP de demain. TP-01337 CDTBGO — Niveau 5 — Alternance — IDF.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://abm-formation.fr">
-  <meta property="og:image" content="https://abm-formation.fr/og-image.png">
-  <meta property="og:locale" content="fr_FR">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ABM Formation — École BTP IDF">
-  <meta name="twitter:description" content="Formation conducteur de travaux TP-01337 CDTBGO Niveau 5 en alternance — Île-de-France">
+  <meta property="og:url" content="https://abmformation-btp.fr">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://abm-formation.fr">
+  <link rel="canonical" href="https://abmformation-btp.fr">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy:  #0D1B3E; --navy2: #091428; --navy3: #142035;
-      --gold:  #C8922A; --gold2: #DCA84A;
-      --white: #FFFFFF; --grey:  #8896A8; --green: #0D3D20;
+      --navy:  #0D1B3E;
+      --navy2: #091428;
+      --navy3: #142035;
+      --gold:  #C8922A;
+      --gold2: #DCA84A;
+      --white: #FFFFFF;
+      --grey:  #8896A8;
+      --lgrey: #F0F4F8;
+      --green: #0D3D20;
       --display: 'Playfair Display', Georgia, serif;
-      --body:    'Outfit', system-ui, sans-serif;
+      --body: 'Outfit', system-ui, sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: var(--body); background: var(--navy); color: var(--white); overflow-x: hidden; }
 
+    /* ── NAV ── */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 4rem; height: 68px;
-      background: rgba(9,20,40,0.97); backdrop-filter: blur(16px);
+      padding: 0 3rem; height: 64px;
+      background: rgba(9,20,40,0.97);
+      backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(200,146,42,0.2);
     }
-    .nav-brand { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
-    .nav-logo { font-family: var(--display); font-size: 1.4rem; font-weight: 900; color: var(--white); }
+    .nav-brand { text-decoration: none; display: flex; align-items: center; gap: 0.8rem; }
+    .nav-logo { font-family: var(--display); font-size: 1.3rem; font-weight: 900; color: var(--white); }
     .nav-logo span { color: var(--gold); }
-    .nav-sub { font-size: 0.68rem; font-weight: 500; color: var(--grey); text-transform: uppercase; letter-spacing: 0.12em; border-left: 1px solid rgba(255,255,255,0.15); padding-left: 1rem; }
-    .nav-menu { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
-    .nav-menu a { font-size: 0.82rem; font-weight: 500; color: rgba(255,255,255,0.7); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
-    .nav-menu a:hover { color: var(--white); }
-    .nav-cta { padding: 0.6rem 1.5rem; background: var(--gold); color: var(--navy) !important; font-weight: 600 !important; border-radius: 2px; transition: background 0.2s !important; }
+    .nav-sub { font-size: 0.65rem; color: var(--grey); text-transform: uppercase; letter-spacing: 0.12em; border-left: 1px solid rgba(255,255,255,0.15); padding-left: 0.8rem; }
+    .nav-menu { display: flex; align-items: center; gap: 0; list-style: none; }
+    .nav-menu a { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none; padding: 0.5rem 1rem; transition: color 0.2s; letter-spacing: 0.03em; }
+    .nav-menu a:hover, .nav-menu a.active { color: var(--white); }
+    .nav-cta { background: var(--gold) !important; color: var(--navy) !important; font-weight: 600 !important; border-radius: 2px; padding: 0.5rem 1.2rem !important; transition: background 0.2s !important; margin-left: 0.5rem; }
     .nav-cta:hover { background: var(--gold2) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); transition: 0.3s; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--navy2); border-bottom: 1px solid rgba(200,146,42,0.2); z-index: 999; padding: 1rem 0; }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; padding: 0.8rem 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.8); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .mobile-menu a:last-child { color: var(--gold); font-weight: 600; border-bottom: none; }
 
-    #hero { min-height: 100vh; position: relative; display: flex; align-items: flex-end; padding: 0 4rem 6rem; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; background: linear-gradient(160deg, var(--navy2) 0%, var(--navy) 60%, #1a2d50 100%); }
-    .hero-grid { position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(200,146,42,0.035) 59px, rgba(200,146,42,0.035) 60px), repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(200,146,42,0.035) 59px, rgba(200,146,42,0.035) 60px); }
-    .hero-glow { position: absolute; width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, rgba(200,146,42,0.07) 0%, transparent 70%); right: -150px; top: 50%; transform: translateY(-50%); }
-    .hero-content { position: relative; z-index: 1; max-width: 760px; }
-    .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 1rem; border: 1px solid rgba(200,146,42,0.35); font-size: 0.7rem; font-weight: 600; color: var(--gold); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 2rem; opacity: 0; animation: up 0.7s 0.1s ease forwards; }
+    /* ── PAGES ── */
+    .page { display: none; min-height: 100vh; }
+    .page.active { display: block; }
+
+    /* ── HERO ── */
+    #page-home { display: block; }
+    .hero {
+      min-height: 100vh; position: relative;
+      display: flex; align-items: flex-end;
+      padding: 0 4rem 5rem;
+      overflow: hidden;
+    }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(155deg, var(--navy2) 0%, var(--navy) 55%, #162845 100%); }
+    .hero-grid { position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(200,146,42,0.03) 59px, rgba(200,146,42,0.03) 60px), repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(200,146,42,0.03) 59px, rgba(200,146,42,0.03) 60px); }
+    .hero-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(200,146,42,0.07) 0%, transparent 70%); right: -100px; top: 40%; transform: translateY(-50%); }
+    .hero-content { position: relative; z-index: 1; max-width: 680px; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0.9rem; border: 1px solid rgba(200,146,42,0.35); font-size: 0.68rem; font-weight: 600; color: var(--gold); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1.8rem; animation: fadeUp 0.6s 0.1s both; }
     .hero-tag::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
-    h1 { font-family: var(--display); font-size: clamp(3.2rem, 6vw, 5.5rem); font-weight: 900; line-height: 1.05; color: var(--white); margin-bottom: 1.5rem; opacity: 0; animation: up 0.7s 0.2s ease forwards; }
+    h1 { font-family: var(--display); font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 900; line-height: 1.05; margin-bottom: 1.4rem; animation: fadeUp 0.6s 0.2s both; }
     h1 em { font-style: italic; color: var(--gold); }
-    .hero-lead { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.72); line-height: 1.7; max-width: 560px; margin-bottom: 3rem; opacity: 0; animation: up 0.7s 0.3s ease forwards; }
-    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: up 0.7s 0.4s ease forwards; }
-    .btn-gold { padding: 0.9rem 2.2rem; background: var(--gold); color: var(--navy); font-weight: 600; font-size: 0.9rem; border-radius: 2px; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; }
+    .hero-lead { font-size: clamp(0.95rem, 1.5vw, 1.05rem); font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.7; max-width: 520px; margin-bottom: 2.5rem; animation: fadeUp 0.6s 0.3s both; }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.6s 0.4s both; }
+    .btn-gold { padding: 0.85rem 2rem; background: var(--gold); color: var(--navy); font-weight: 600; font-size: 0.88rem; border-radius: 2px; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; cursor: pointer; border: none; }
     .btn-gold:hover { background: var(--gold2); transform: translateY(-2px); }
-    .btn-outline { padding: 0.9rem 2.2rem; background: transparent; color: var(--white); font-weight: 400; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.25); border-radius: 2px; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline { padding: 0.85rem 2rem; background: transparent; color: var(--white); font-weight: 400; font-size: 0.88rem; border: 1px solid rgba(255,255,255,0.25); border-radius: 2px; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; cursor: pointer; }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
-    .hero-badges { position: absolute; right: 4rem; bottom: 6rem; display: flex; flex-direction: column; gap: 0.8rem; opacity: 0; animation: up 0.7s 0.5s ease forwards; }
-    .badge { display: flex; align-items: center; gap: 0.8rem; padding: 0.7rem 1.2rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
-    .badge-n { font-family: var(--display); font-size: 1.6rem; font-weight: 700; color: var(--gold); }
-    .badge-l { font-size: 0.75rem; color: var(--grey); line-height: 1.3; }
+    .hero-stats { position: absolute; right: 4rem; bottom: 5rem; display: flex; flex-direction: column; gap: 0.8rem; animation: fadeUp 0.6s 0.5s both; }
+    .stat { display: flex; align-items: center; gap: 0.8rem; padding: 0.7rem 1.2rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); }
+    .stat-n { font-family: var(--display); font-size: 1.5rem; font-weight: 700; color: var(--gold); }
+    .stat-l { font-size: 0.72rem; color: var(--grey); line-height: 1.3; }
 
-    section { padding: 7rem 4rem; }
+    /* ── SECTIONS COMMUNES ── */
+    .section { padding: 5rem 4rem; }
+    .section-light { background: var(--lgrey); color: var(--navy); }
+    .section-dark { background: var(--navy3); }
+    .section-darker { background: var(--navy2); }
     .inner { max-width: 1100px; margin: 0 auto; }
-    .tag { font-size: 0.7rem; font-weight: 600; color: var(--gold); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.8rem; }
-    h2 { font-family: var(--display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.15; color: var(--white); margin-bottom: 1rem; }
+    .tag { font-size: 0.68rem; font-weight: 600; color: var(--gold); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.7rem; }
+    .tag-dark { color: var(--gold); }
+    h2 { font-family: var(--display); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; line-height: 1.15; margin-bottom: 0.8rem; }
     h2 em { font-style: italic; color: var(--gold); }
-    .lead { font-size: 1rem; font-weight: 300; color: var(--grey); max-width: 580px; margin-bottom: 3.5rem; line-height: 1.7; }
+    h2.dark { color: var(--navy); }
+    .lead { font-size: 0.95rem; font-weight: 300; color: var(--grey); max-width: 560px; margin-bottom: 3rem; line-height: 1.7; }
+    .lead.dark { color: #555; }
     .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(200,146,42,0.25), transparent); }
 
-    #chiffres { background: var(--navy3); }
-    .chiffres-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(200,146,42,0.1); }
-    .chiffre { background: var(--navy2); padding: 3rem 2rem; text-align: center; }
-    .chiffre-n { font-family: var(--display); font-size: 3.5rem; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
-    .chiffre-l { font-size: 0.85rem; color: rgba(255,255,255,0.6); font-weight: 400; }
+    /* ── CHIFFRES ── */
+    .chiffres { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(200,146,42,0.1); }
+    .chiffre { background: var(--navy2); padding: 2.5rem 1.5rem; text-align: center; }
+    .chiffre-n { font-family: var(--display); font-size: 3rem; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
+    .chiffre-l { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
 
-    #formation { background: var(--navy); }
-    .formation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-    .blocs { display: flex; flex-direction: column; gap: 1px; background: rgba(200,146,42,0.1); }
-    .bloc { display: flex; align-items: center; background: var(--navy3); transition: background 0.2s; }
+    /* ── FORMATION ── */
+    .formation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .blocs { display: flex; flex-direction: column; gap: 1px; background: rgba(200,146,42,0.15); }
+    .bloc { display: flex; align-items: stretch; background: var(--navy3); transition: background 0.2s; }
     .bloc:hover { background: var(--navy2); }
-    .bloc-code { min-width: 60px; height: 60px; background: var(--gold); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 1rem; font-weight: 900; color: var(--navy); flex-shrink: 0; }
-    .bloc-info { flex: 1; padding: 0 1.2rem; }
-    .bloc-name { font-size: 0.88rem; font-weight: 600; color: var(--white); }
-    .bloc-sub { font-size: 0.78rem; color: var(--grey); margin-top: 0.2rem; }
-    .bloc-h { padding: 0 1.2rem; font-family: var(--display); font-size: 1.1rem; font-weight: 700; color: var(--gold); min-width: 60px; text-align: right; }
-    .total { background: var(--gold); color: var(--navy); padding: 1.2rem 1.8rem; display: flex; justify-content: space-between; align-items: center; font-weight: 600; margin-top: 1px; }
-    .total-n { font-family: var(--display); font-size: 1.8rem; font-weight: 900; }
-    .cards { display: flex; flex-direction: column; gap: 0; }
-    .card { background: var(--navy3); border-left: 3px solid var(--gold); padding: 1.2rem 1.5rem; margin-bottom: 4px; }
-    .card-l { font-size: 0.7rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
-    .card-v { font-size: 0.9rem; color: var(--white); }
+    .bloc-code { min-width: 56px; display: flex; align-items: center; justify-content: center; background: var(--gold); font-family: var(--display); font-size: 0.95rem; font-weight: 900; color: var(--navy); flex-shrink: 0; padding: 1.2rem 0; }
+    .bloc-info { flex: 1; padding: 1.2rem 1.4rem; }
+    .bloc-name { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.35rem; }
+    .bloc-sub { font-size: 0.77rem; color: var(--grey); line-height: 1.4; }
+    .bloc-h { padding: 1.2rem 1.2rem 1.2rem 0; font-family: var(--display); font-size: 1rem; font-weight: 700; color: var(--gold); min-width: 50px; text-align: right; display: flex; align-items: center; justify-content: flex-end; }
+    .total-bar { background: var(--gold); color: var(--navy); padding: 1rem 1.4rem; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.88rem; margin-top: 1px; }
+    .total-n { font-family: var(--display); font-size: 1.6rem; font-weight: 900; }
+    .tools { margin-top: 1rem; font-size: 0.78rem; color: var(--grey); line-height: 1.6; }
+    .cards { display: flex; flex-direction: column; gap: 4px; }
+    .card { background: var(--navy3); border-left: 3px solid var(--gold); padding: 1rem 1.4rem; }
+    .card-l { font-size: 0.67rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.35rem; }
+    .card-v { font-size: 0.88rem; color: var(--white); line-height: 1.5; }
 
-    #debouches { background: var(--navy3); }
-    .debouches-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(200,146,42,0.1); }
-    .debouche { background: var(--navy2); padding: 2.2rem 2rem; }
-    .debouche-s { font-size: 0.72rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.6rem; }
-    .debouche-p { font-family: var(--display); font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.8rem; }
-    .debouche-sal { font-size: 0.85rem; color: var(--grey); }
+    /* ── DÉBOUCHÉS ── */
+    .debouches { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(200,146,42,0.1); }
+    .debouche { background: var(--navy2); padding: 2rem 1.8rem; }
+    .debouche-s { font-size: 0.68rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+    .debouche-p { font-family: var(--display); font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.7rem; }
+    .debouche-sal { font-size: 0.82rem; color: var(--grey); }
     .debouche-sal strong { color: var(--white); }
 
-    #formateurs { background: var(--navy); }
-    .citation { font-family: var(--display); font-size: 1.3rem; font-style: italic; color: rgba(255,255,255,0.82); border-left: 3px solid var(--gold); padding-left: 1.5rem; line-height: 1.55; margin-bottom: 3.5rem; max-width: 700px; }
-    .formateurs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(200,146,42,0.1); }
-    .formateur { background: var(--navy3); padding: 2rem 1.8rem; }
-    .formateur-d { font-size: 0.7rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.8rem; }
-    .formateur-t { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.6rem; }
-    .formateur-x { font-size: 0.82rem; color: var(--grey); line-height: 1.5; }
+    /* ── FORMATEURS ── */
+    .formateurs { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(200,146,42,0.1); }
+    .formateur { background: var(--navy3); padding: 1.8rem; }
+    .formateur-d { font-size: 0.67rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.7rem; }
+    .formateur-t { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .formateur-x { font-size: 0.8rem; color: var(--grey); line-height: 1.5; }
 
-    #admission { background: var(--navy3); }
-    .admission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-    .admission-title { font-family: var(--display); font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 1.5rem; }
-    .profils { display: flex; flex-direction: column; gap: 1px; background: rgba(200,146,42,0.1); margin-bottom: 1.5rem; }
-    .profil { background: var(--navy2); padding: 1.2rem 1.5rem; }
-    .profil-t { font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 0.3rem; }
-    .profil-d { font-size: 0.82rem; color: var(--grey); }
-    .etapes { display: flex; flex-direction: column; gap: 1.2rem; }
-    .etape { display: flex; align-items: flex-start; gap: 1.2rem; }
-    .etape-n { min-width: 36px; height: 36px; background: var(--gold); color: var(--navy); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 1rem; font-weight: 900; border-radius: 2px; flex-shrink: 0; }
-    .etape-t { font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 0.2rem; }
-    .etape-d { font-size: 0.82rem; color: var(--grey); }
+    /* ── ADMISSION ── */
+    .admission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+    .admission-title { font-family: var(--display); font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 1.2rem; }
+    .profils { display: flex; flex-direction: column; gap: 1px; background: rgba(200,146,42,0.1); margin-bottom: 1.2rem; }
+    .profil { background: var(--navy2); padding: 1rem 1.4rem; }
+    .profil-t { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+    .profil-d { font-size: 0.8rem; color: var(--grey); }
+    .etapes { display: flex; flex-direction: column; gap: 1rem; }
+    .etape { display: flex; align-items: flex-start; gap: 1rem; }
+    .etape-n { min-width: 34px; height: 34px; background: var(--gold); color: var(--navy); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 0.95rem; font-weight: 900; border-radius: 2px; flex-shrink: 0; }
+    .etape-t { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.2rem; }
+    .etape-d { font-size: 0.78rem; color: var(--grey); }
 
-    #entreprises { background: var(--navy2); }
-    .entreprises-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    /* ── ENTREPRISES ── */
+    .entreprises-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     .avantages { display: flex; flex-direction: column; gap: 1px; background: rgba(200,146,42,0.1); }
-    .avantage { display: flex; align-items: flex-start; gap: 1.2rem; background: var(--navy3); padding: 1.5rem; }
-    .av-icon { font-size: 1.4rem; min-width: 2rem; }
-    .av-t { font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 0.3rem; }
-    .av-d { font-size: 0.82rem; color: var(--grey); line-height: 1.5; }
+    .avantage { display: flex; align-items: flex-start; gap: 1.1rem; background: var(--navy3); padding: 1.4rem; }
+    .av-icon { font-size: 1.3rem; min-width: 1.8rem; }
+    .av-t { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+    .av-d { font-size: 0.78rem; color: var(--grey); line-height: 1.5; }
 
-    #candidater { background: var(--gold); text-align: center; padding: 5rem 4rem; }
-    #candidater h2 { font-family: var(--display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--navy); margin-bottom: 1rem; }
-    #candidater p { font-size: 1rem; color: rgba(13,27,62,0.7); margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
-    .btn-navy { padding: 1rem 2.5rem; background: var(--navy); color: var(--white); font-weight: 600; font-size: 0.95rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; display: inline-block; }
+    /* ── ECOLE ── */
+    .ecole-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .ecole-cards { display: flex; flex-direction: column; gap: 4px; }
+    .ecole-card { background: var(--navy3); border-left: 3px solid var(--gold); padding: 1.2rem 1.5rem; }
+    .ecole-card-t { font-size: 0.67rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+    .ecole-card-v { font-size: 0.88rem; color: var(--white); font-family: var(--display); font-style: italic; line-height: 1.5; }
+
+    /* ── CTA ── */
+    .cta-section { background: var(--gold); text-align: center; padding: 4rem 2rem; }
+    .cta-section h2 { font-family: var(--display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--navy); margin-bottom: 0.8rem; }
+    .cta-section p { font-size: 0.95rem; color: rgba(13,27,62,0.7); margin-bottom: 2rem; max-width: 460px; margin-left: auto; margin-right: auto; }
+    .btn-navy { padding: 0.9rem 2.2rem; background: var(--navy); color: var(--white); font-weight: 600; font-size: 0.9rem; border-radius: 2px; text-decoration: none; display: inline-block; transition: background 0.2s; }
     .btn-navy:hover { background: var(--navy2); }
 
-    #contact-bar { background: var(--navy3); padding: 3rem 4rem; border-top: 1px solid rgba(200,146,42,0.15); }
-    .contact-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; }
-    .contact-name { font-family: var(--display); font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
-    .contact-role { font-size: 0.85rem; color: var(--gold); font-weight: 500; }
-    .contact-items { display: flex; gap: 3rem; flex-wrap: wrap; }
-    .contact-item-l { font-size: 0.68rem; color: var(--grey); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem; }
-    .contact-item-v { font-size: 0.9rem; color: var(--white); font-weight: 500; }
+    /* ── CONTACT BAR ── */
+    .contact-bar { background: var(--navy3); padding: 2.5rem 4rem; border-top: 1px solid rgba(200,146,42,0.15); }
+    .contact-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .contact-name { font-family: var(--display); font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 0.2rem; }
+    .contact-role { font-size: 0.8rem; color: var(--gold); font-weight: 500; }
+    .contact-items { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .contact-item-l { font-size: 0.65rem; color: var(--grey); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
+    .contact-item-v { font-size: 0.88rem; color: var(--white); font-weight: 500; }
 
-    footer { background: var(--navy2); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(200,146,42,0.1); flex-wrap: wrap; gap: 1rem; }
-    .footer-logo { font-family: var(--display); font-size: 1.1rem; font-weight: 900; color: var(--white); }
+    /* ── FOOTER ── */
+    footer { background: var(--navy2); padding: 1.8rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(200,146,42,0.1); flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--display); font-size: 1rem; font-weight: 900; color: var(--white); }
     .footer-logo span { color: var(--gold); }
-    .footer-info { font-size: 0.75rem; color: var(--grey); text-align: center; }
-    .footer-seo { font-size: 0.67rem; color: rgba(136,150,168,0.35); text-align: right; line-height: 1.6; }
+    .footer-info { font-size: 0.72rem; color: var(--grey); text-align: center; }
+    .footer-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.7rem; color: var(--grey); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
 
-    @keyframes up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    /* ── LÉGAL ── */
+    .legal-section { padding: 4rem; background: var(--navy2); }
+    .legal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .legal-block { background: var(--navy); border-left: 3px solid rgba(200,146,42,0.3); padding: 1.4rem 1.6rem; }
+    .legal-title { font-size: 0.72rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.7rem; }
+    .legal-content { font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.7; }
+    .legal-content strong { color: var(--white); }
+    .legal-bar { background: var(--navy2); padding: 1.2rem 4rem; border-top: 1px solid rgba(200,146,42,0.1); text-align: center; }
+    .legal-bar p { font-size: 0.72rem; color: var(--grey); line-height: 1.8; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
     .reveal.in { opacity: 1; transform: translateY(0); }
 
-    @media (max-width: 960px) {
-      nav { padding: 0 1.5rem; } .nav-sub, .nav-menu { display: none; }
-      section { padding: 4rem 1.5rem; } #hero { padding: 0 1.5rem 4rem; }
-      .hero-badges { display: none; }
-      .chiffres-grid, .debouches-grid, .formateurs-grid { grid-template-columns: 1fr 1fr; }
-      .formation-grid, .admission-grid, .entreprises-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      footer, .contact-inner { flex-direction: column; text-align: center; }
-      .footer-seo { text-align: center; }
+    /* ── RESPONSIVE MOBILE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1.2rem; }
+      .nav-sub { display: none; }
+      .nav-menu { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 0 1.5rem 4rem; min-height: 100vh; }
+      .hero-stats { display: none; }
+      h1 { font-size: 2.4rem; }
+      .hero-lead { font-size: 0.95rem; }
+      .section { padding: 3.5rem 1.5rem; }
+      .chiffres { grid-template-columns: 1fr 1fr; }
+      .formation-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .debouches { grid-template-columns: 1fr; }
+      .formateurs { grid-template-columns: 1fr; }
+      .admission-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .entreprises-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .ecole-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-bar { padding: 2rem 1.5rem; }
+      .contact-inner { flex-direction: column; }
+      .contact-items { gap: 1.5rem; }
+      footer { padding: 1.5rem; flex-direction: column; text-align: center; }
+      .legal-section { padding: 3rem 1.5rem; }
+      .legal-grid { grid-template-columns: 1fr; }
+      .legal-bar { padding: 1.2rem 1.5rem; }
+      .hero-btns { flex-direction: column; }
+      .btn-gold, .btn-outline { text-align: center; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      .chiffres { grid-template-columns: 1fr 1fr; }
+      .chiffre-n { font-size: 2.2rem; }
+      h2 { font-size: 1.6rem; }
     }
   </style>
-
-  <!-- Google Analytics — activer avec votre ID GA4 -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="#" class="nav-brand">
+  <a href="#" class="nav-brand" onclick="showPage('home')">
     <span class="nav-logo">ABM <span>Formation</span></span>
     <span class="nav-sub">École BTP — IDF</span>
   </a>
   <ul class="nav-menu">
-    <li><a href="#ecole">Notre école</a></li>
-    <li><a href="#formation">La formation</a></li>
-    <li><a href="#debouches">Débouchés</a></li>
-    <li><a href="#formateurs">Formateurs</a></li>
-    <li><a href="#admission">Admission</a></li>
-    <li><a href="#actualites">Actualités</a></li>
-    <li><a href="#entreprises">Entreprises</a></li>
-    <li><a href="#candidater" class="nav-cta">Candidater</a></li>
+    <li><a href="#" onclick="showPage('home')" id="nav-home">Accueil</a></li>
+    <li><a href="#" onclick="showPage('formation')" id="nav-formation">La formation</a></li>
+    <li><a href="#" onclick="showPage('debouches')" id="nav-debouches">Débouchés</a></li>
+    <li><a href="#" onclick="showPage('admission')" id="nav-admission">Admission</a></li>
+    <li><a href="#" onclick="showPage('entreprises')" id="nav-entreprises">Entreprises</a></li>
+    <li><a href="#" onclick="showPage('contact')" id="nav-contact" class="nav-cta">Candidater</a></li>
   </ul>
+  <div class="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
 
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-content">
-    <div class="hero-tag">Titre Professionnel TP-01337 CDTBGO — Niveau 5</div>
-    <h1>Former les<br><em>conducteurs de travaux</em><br>de référence</h1>
-    <p class="hero-lead">ABM Formation prépare les professionnels BTP à la coordination et à la conduite de chantiers complexes — gros œuvre, TCE, pilotage multi-lots — par des formateurs issus du terrain.</p>
-    <div class="hero-btns">
-      <a href="#candidater" class="btn-gold">Candidater à la formation</a>
-      <a href="#entreprises" class="btn-outline">Espace entreprises</a>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showPage('home');toggleMobile()">Accueil</a>
+  <a href="#" onclick="showPage('formation');toggleMobile()">La formation</a>
+  <a href="#" onclick="showPage('debouches');toggleMobile()">Débouchés</a>
+  <a href="#" onclick="showPage('admission');toggleMobile()">Admission</a>
+  <a href="#" onclick="showPage('entreprises');toggleMobile()">Entreprises</a>
+  <a href="#" onclick="showPage('contact');toggleMobile()">Candidater →</a>
+</div>
+
+<!-- ══ PAGE ACCUEIL ══ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Titre Professionnel TP-01337 CDTBGO — Niveau 5</div>
+      <h1>Former les<br><em>conducteurs de travaux</em><br>de référence</h1>
+      <p class="hero-lead">ABM Formation prépare les professionnels BTP à la coordination et à la conduite de chantiers complexes — gros œuvre, TCE, pilotage multi-lots — par des formateurs issus du terrain.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-gold" onclick="showPage('admission')">Candidater à la formation</a>
+        <a href="#" class="btn-outline" onclick="showPage('entreprises')">Espace entreprises</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-n">Niv.5</div><div class="stat-l">Titre d'État<br>reconnu</div></div>
+      <div class="stat"><div class="stat-n">12</div><div class="stat-l">Mois<br>d'alternance</div></div>
+      <div class="stat"><div class="stat-n">0€</div><div class="stat-l">Pour<br>l'apprenant</div></div>
     </div>
   </div>
-  <div class="hero-badges">
-    <div class="badge"><div class="badge-n">Niv.5</div><div class="badge-l">Titre d'État<br>reconnu</div></div>
-    <div class="badge"><div class="badge-n">12</div><div class="badge-l">Mois<br>d'alternance</div></div>
-    <div class="badge"><div class="badge-n">0€</div><div class="badge-l">Pour<br>l'apprenant</div></div>
-  </div>
-</section>
 
-<!-- NOTRE ÉCOLE -->
-<section id="ecole" style="background:var(--navy2);padding:5rem 4rem;">
-  <div class="inner">
-    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
-      <div>
-        <p class="tag">Notre école</p>
-        <h2>Une école née <em>du terrain</em></h2>
-        <p style="font-size:1rem;color:var(--grey);line-height:1.8;font-weight:300;margin-bottom:1.5rem;">
-          ABM Formation est fondée par un professionnel actif de la coordination de chantiers BTP en Île-de-France. Chaque aspect du programme a été conçu à partir de l'expérience terrain — pas des manuels.
-        </p>
-        <p style="font-size:1rem;color:var(--grey);line-height:1.8;font-weight:300;margin-bottom:2rem;">
-          Notre conviction : un conducteur de travaux se forme dans l'action. C'est pourquoi nos formateurs sont tous des professionnels BTP actifs, et nos alternants passent la moitié de leur formation sur de vrais chantiers.
-        </p>
-        <a href="mailto:contact@abm-formation.fr" class="btn-outline" style="font-size:0.85rem;">Nous contacter</a>
-      </div>
-      <div>
-        <div style="background:var(--navy3);border-left:3px solid var(--gold);padding:2rem 2.2rem;margin-bottom:4px;">
-          <div style="font-size:0.7rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.6rem;">Notre mission</div>
-          <div style="font-family:var(--display);font-size:1.1rem;font-style:italic;color:var(--white);line-height:1.5;">Former des conducteurs de travaux immédiatement opérationnels sur les chantiers les plus exigeants d'Île-de-France.</div>
-        </div>
-        <div style="background:var(--navy3);border-left:3px solid rgba(200,146,42,0.3);padding:2rem 2.2rem;margin-bottom:4px;">
-          <div style="font-size:0.7rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.6rem;">Notre approche</div>
-          <div style="font-size:0.9rem;color:rgba(255,255,255,0.75);line-height:1.6;">100% des formateurs sont des professionnels du BTP actifs. Les cours s'appuient sur des cas réels issus de chantiers hospitaliers, tertiaires et logements collectifs en IDF.</div>
-        </div>
-        <div style="background:var(--navy3);border-left:3px solid rgba(200,146,42,0.3);padding:2rem 2.2rem;">
-          <div style="font-size:0.7rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.6rem;">Notre engagement</div>
-          <div style="font-size:0.9rem;color:rgba(255,255,255,0.75);line-height:1.6;">Chaque alternant ABM Formation est suivi individuellement du premier jour jusqu'à l'obtention de son titre.</div>
-        </div>
+  <div class="divider"></div>
+
+  <!-- CHIFFRES -->
+  <div class="section section-dark">
+    <div class="inner">
+      <div class="chiffres reveal">
+        <div class="chiffre"><div class="chiffre-n">14</div><div class="chiffre-l">Compétences professionnelles certifiées</div></div>
+        <div class="chiffre"><div class="chiffre-n">1785h</div><div class="chiffre-l">De formation sur 12 mois</div></div>
+        <div class="chiffre"><div class="chiffre-n">100%</div><div class="chiffre-l">Formateurs issus du terrain BTP</div></div>
+        <div class="chiffre"><div class="chiffre-n">2800€</div><div class="chiffre-l">Salaire brut moyen à la sortie</div></div>
       </div>
     </div>
   </div>
-</section>
 
-<div class="divider"></div>
+  <div class="divider"></div>
 
-<section id="chiffres">
-  <div class="inner">
-    <div class="chiffres-grid reveal">
-      <div class="chiffre"><div class="chiffre-n">14</div><div class="chiffre-l">Compétences professionnelles certifiées</div></div>
-      <div class="chiffre"><div class="chiffre-n">1785h</div><div class="chiffre-l">De formation sur 12 mois</div></div>
-      <div class="chiffre"><div class="chiffre-n">100%</div><div class="chiffre-l">Formateurs issus du terrain BTP</div></div>
-      <div class="chiffre"><div class="chiffre-n">2800€</div><div class="chiffre-l">Salaire brut moyen à la sortie</div></div>
+  <!-- NOTRE ÉCOLE -->
+  <div class="section section-darker">
+    <div class="inner">
+      <div class="ecole-grid reveal">
+        <div>
+          <p class="tag">Notre école</p>
+          <h2>Une école née <em>du terrain</em></h2>
+          <p class="lead">ABM Formation est fondée par un professionnel actif de la coordination de chantiers BTP en Île-de-France. Chaque aspect du programme a été conçu à partir de l'expérience terrain.</p>
+          <a href="#" class="btn-outline" onclick="showPage('formation')" style="font-size:0.85rem;">Découvrir le programme</a>
+        </div>
+        <div class="ecole-cards">
+          <div class="ecole-card">
+            <div class="ecole-card-t">Notre mission</div>
+            <div class="ecole-card-v">Former des conducteurs de travaux immédiatement opérationnels sur les chantiers les plus exigeants d'Île-de-France.</div>
+          </div>
+          <div class="ecole-card">
+            <div class="ecole-card-t">Notre approche</div>
+            <div class="ecole-card-v">100% des formateurs sont des professionnels BTP actifs. Les cours s'appuient sur des cas réels issus de chantiers en IDF.</div>
+          </div>
+          <div class="ecole-card">
+            <div class="ecole-card-t">Notre engagement</div>
+            <div class="ecole-card-v">Chaque alternant est suivi individuellement du premier jour jusqu'à l'obtention de son titre.</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
-<div class="divider"></div>
+</div>
 
-<section id="formation">
-  <div class="inner">
-    <div class="reveal">
-      <p class="tag">La formation</p>
-      <h2>Conducteur de travaux du bâtiment<br>et du <em>gros œuvre</em></h2>
-      <p class="lead">Un programme conçu par et pour les professionnels du BTP, aligné sur les exigences réelles du marché francilien. Chaque compétence est évaluée en conditions professionnelles réelles.</p>
-    </div>
-    <div class="formation-grid">
+<!-- ══ PAGE FORMATION ══ -->
+<div id="page-formation" class="page">
+  <div class="section section-darker" style="padding-top:7rem;">
+    <div class="inner">
       <div class="reveal">
-        <div class="blocs">
-          <div class="bloc"><div class="bloc-code">B1</div><div class="bloc-info"><div class="bloc-name">Technologie du bâtiment et du gros œuvre</div><div class="bloc-sub">Lecture de plans · Modes constructifs · Béton armé · DTU</div></div><div class="bloc-h">110h</div></div>
-          <div class="bloc"><div class="bloc-code">B2</div><div class="bloc-info"><div class="bloc-name">Préparation et organisation de chantier GO</div><div class="bloc-sub">Planning MS Project · PIC · Budgets · Consultation entreprises</div></div><div class="bloc-h">165h</div></div>
-          <div class="bloc"><div class="bloc-code">B3</div><div class="bloc-info"><div class="bloc-name">Coordination TCE et pilotage multi-lots</div><div class="bloc-sub">OPC · Réunions de chantier · Contrôle d'exécution · BIM Revit</div></div><div class="bloc-h">165h</div></div>
-          <div class="bloc"><div class="bloc-code">B4</div><div class="bloc-info"><div class="bloc-name">Gestion financière et administrative</div><div class="bloc-sub">Suivi budgétaire · Facturation · DGD · Étude de prix</div></div><div class="bloc-h">135h</div></div>
-          <div class="bloc"><div class="bloc-code">B5</div><div class="bloc-info"><div class="bloc-name">Management, QSE et AIPR Encadrant</div><div class="bloc-sub">Management d'équipes · PPSPS · Sécurité réseaux · AIPR</div></div><div class="bloc-h">120h</div></div>
+        <p class="tag">La formation</p>
+        <h2>Conducteur de travaux du bâtiment<br>et du <em>gros œuvre</em></h2>
+        <p class="lead">Un programme aligné sur le référentiel officiel TP-01337 du Ministère du Travail. Chaque compétence évaluée en conditions professionnelles réelles.</p>
+      </div>
+      <div class="formation-grid">
+        <div class="reveal">
+          <div class="blocs">
+            <div class="bloc"><div class="bloc-code">B1</div><div class="bloc-info"><div class="bloc-name">Technologie du bâtiment et du gros œuvre</div><div class="bloc-sub">Lecture de plans · Modes constructifs · Béton armé · DTU · Droit construction</div></div><div class="bloc-h">110h</div></div>
+            <div class="bloc"><div class="bloc-code">B2</div><div class="bloc-info"><div class="bloc-name">Préparation et organisation de chantier GO</div><div class="bloc-sub">Planning MS Project · PIC · Budgets · Consultation entreprises · Étude de prix</div></div><div class="bloc-h">165h</div></div>
+            <div class="bloc"><div class="bloc-code">B3</div><div class="bloc-info"><div class="bloc-name">Coordination TCE et pilotage multi-lots</div><div class="bloc-sub">OPC · Réunions de chantier · Contrôle d'exécution · BIM Revit · Livraison</div></div><div class="bloc-h">165h</div></div>
+            <div class="bloc"><div class="bloc-code">B4</div><div class="bloc-info"><div class="bloc-name">Gestion financière et administrative</div><div class="bloc-sub">Suivi budgétaire · Facturation · DGD · Situations de travaux</div></div><div class="bloc-h">135h</div></div>
+            <div class="bloc"><div class="bloc-code">B5</div><div class="bloc-info"><div class="bloc-name">Management, QSE et AIPR Encadrant</div><div class="bloc-sub">Management d'équipes · PPSPS · Sécurité réseaux · AIPR obligatoire avant examen</div></div><div class="bloc-h">120h</div></div>
+          </div>
+          <div class="total-bar"><span>Formation totale</span><span class="total-n">1 785h</span></div>
+          <p class="tools">Outils : MS Project · AutoCAD · Revit (BIM) · Excel · Logiciel étude de prix</p>
         </div>
-        <div class="total"><span>Formation totale</span><span class="total-n">1 785h</span></div>
-        <p style="font-size:0.8rem;color:var(--grey);margin-top:1rem;">Outils enseignés : MS Project · AutoCAD · Revit (BIM) · Excel · Logiciel étude de prix</p>
-      </div>
-      <div class="reveal cards">
-        <div class="card"><div class="card-l">Titre délivré</div><div class="card-v"><strong>TP-01337 CDTBGO</strong> — Conducteur de travaux du bâtiment et du gros œuvre — Niveau 5</div></div>
-        <div class="card"><div class="card-l">Modalité</div><div class="card-v">Alternance — Contrat de professionnalisation — tous âges</div></div>
-        <div class="card"><div class="card-l">Rythme</div><div class="card-v">875h en centre + 910h en entreprise partenaire sur 12 mois</div></div>
-        <div class="card"><div class="card-l">Évaluation</div><div class="card-v">Mise en situation professionnelle (31h45) + entretiens jury + dossier professionnel</div></div>
-        <div class="card"><div class="card-l">Certification</div><div class="card-v">Titre Professionnel d'État — Ministère du Travail — Arrêté du 19/02/2026</div></div>
-        <div class="card"><div class="card-l">Première promotion</div><div class="card-v"><strong>Septembre 2027</strong> — Noisy-le-Sec (93130) — Île-de-France</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="debouches">
-  <div class="inner">
-    <div class="reveal">
-      <p class="tag">Débouchés professionnels</p>
-      <h2>Des postes à responsabilités<br>sur les <em>grands chantiers IDF</em></h2>
-      <p class="lead">Nos diplômés accèdent directement à des postes d'encadrement dans les entreprises générales, bureaux d'études et cabinets de maîtrise d'œuvre.</p>
-    </div>
-    <div class="debouches-grid reveal">
-      <div class="debouche"><div class="debouche-s">Entreprise générale</div><div class="debouche-p">Conducteur de travaux bâtiment</div><div class="debouche-sal">Débutant : <strong>2 400 — 3 200 € brut/mois</strong></div></div>
-      <div class="debouche"><div class="debouche-s">Bureau d'études / MOE</div><div class="debouche-p">Coordinateur OPC / MOEX</div><div class="debouche-sal">Débutant : <strong>2 200 — 3 000 € brut/mois</strong></div></div>
-      <div class="debouche"><div class="debouche-s">Gros œuvre / TCE</div><div class="debouche-p">Chef de chantier confirmé</div><div class="debouche-sal">Débutant : <strong>2 200 — 2 800 € brut/mois</strong></div></div>
-      <div class="debouche"><div class="debouche-s">Entreprise générale</div><div class="debouche-p">Assistant conducteur de travaux</div><div class="debouche-sal">Débutant : <strong>2 000 — 2 500 € brut/mois</strong></div></div>
-      <div class="debouche"><div class="debouche-s">Promoteur / MOA</div><div class="debouche-p">Chargé de suivi de chantier</div><div class="debouche-sal">Débutant : <strong>2 200 — 2 800 € brut/mois</strong></div></div>
-      <div class="debouche"><div class="debouche-s">Grand Paris Express · Hospitalier · Tertiaire</div><div class="debouche-p">Coordinateur de projet construction</div><div class="debouche-sal">Confirmé : <strong>3 500 — 5 000 € brut/mois</strong></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="formateurs">
-  <div class="inner">
-    <div class="reveal">
-      <p class="tag">Notre équipe pédagogique</p>
-      <h2>Formés par ceux qui <em>construisent</em></h2>
-      <p class="citation">« Chaque module est dispensé par un professionnel actif du BTP. Ce qui est enseigné en cours, l'alternant le retrouve sur son chantier dès la semaine suivante. »</p>
-    </div>
-    <div class="formateurs-grid reveal">
-      <div class="formateur"><div class="formateur-d">Coordination · Planification</div><div class="formateur-t">Coordinateur OPC / MOEX senior</div><div class="formateur-x">Intervenant principal — 10+ ans sur des chantiers hospitaliers, data centers et grands projets tertiaires IDF. MS Project, coordination multi-lots, gestion des interfaces TCE.</div></div>
-      <div class="formateur"><div class="formateur-d">Gros œuvre · Technologie</div><div class="formateur-t">Conducteur de travaux GO confirmé</div><div class="formateur-x">Spécialiste béton armé, coffrages, modes constructifs. Expérience chantiers logements collectifs et ERP. Habilitation AIPR Encadrant.</div></div>
-      <div class="formateur"><div class="formateur-d">Gestion · Finance</div><div class="formateur-t">Responsable exploitation BTP</div><div class="formateur-x">Étude de prix, DGD, gestion financière de chantier, analyse des écarts. Expérience entreprises générales IDF 50 à 500 salariés.</div></div>
-      <div class="formateur"><div class="formateur-d">QSE · Prévention</div><div class="formateur-t">Coordinateur SPS / Préventeur</div><div class="formateur-x">PPSPS, plan de prévention, analyse de risques, gestion des déchets chantier. Habilitations AIPR Encadrant et SPS niveau 1.</div></div>
-      <div class="formateur"><div class="formateur-d">BIM · Outils numériques</div><div class="formateur-t">BIM Manager chantier</div><div class="formateur-x">Revit, AutoCAD, coordination BIM en phase chantier, clash detection, extraction de quantitatifs. GED et outils de collaboration numérique.</div></div>
-      <div class="formateur"><div class="formateur-d">Droit · Marchés</div><div class="formateur-t">Juriste droit de la construction</div><div class="formateur-x">Contrats de sous-traitance, marchés publics et privés, responsabilités constructeur, garanties décennale, contentieux de la construction.</div></div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="admission">
-  <div class="inner">
-    <div class="reveal" style="margin-bottom:3rem;">
-      <p class="tag">Admission</p>
-      <h2>Qui peut <em>candidater</em> ?</h2>
-      <p class="lead">ABM Formation accueille les professionnels BTP en évolution, les titulaires d'un Bac professionnel et les personnes en reconversion. La formation est ouverte à tous les âges via le contrat de professionnalisation.</p>
-    </div>
-    <div class="admission-grid">
-      <div class="reveal">
-        <div class="admission-title">Profils admis</div>
-        <div class="profils">
-          <div class="profil"><div class="profil-t">Professionnel BTP avec expérience terrain</div><div class="profil-d">Ouvrier, technicien ou chef d'équipe — 2 ans minimum d'expérience sur chantier</div></div>
-          <div class="profil"><div class="profil-t">Titulaire d'un Bac professionnel BTP</div><div class="profil-d">Bac pro bâtiment, travaux publics ou filière génie civil</div></div>
-          <div class="profil"><div class="profil-t">Professionnel en reconversion</div><div class="profil-d">Toute personne souhaitant évoluer vers la conduite de travaux BTP — tous âges</div></div>
-        </div>
-        <div class="card" style="margin-top:4px;"><div class="card-l">Condition préalable à l'examen</div><div class="card-v">Attestation <strong style="color:var(--gold);">AIPR Encadrant</strong> en cours de validité — organisée par ABM Formation en cours de formation</div></div>
-      </div>
-      <div class="reveal">
-        <div class="admission-title">Procédure d'admission</div>
-        <div class="etapes">
-          <div class="etape"><div class="etape-n">1</div><div><div class="etape-t">Dépôt du dossier de candidature</div><div class="etape-d">CV + lettre de motivation + justificatifs d'expérience ou diplôme BTP</div></div></div>
-          <div class="etape"><div class="etape-n">2</div><div><div class="etape-t">Entretien individuel de positionnement</div><div class="etape-d">Évaluation des compétences sur les 14 axes du référentiel TP-01337</div></div></div>
-          <div class="etape"><div class="etape-n">3</div><div><div class="etape-t">Signature du contrat de professionnalisation</div><div class="etape-d">Avec votre entreprise partenaire — ABM Formation vous accompagne</div></div></div>
-          <div class="etape"><div class="etape-n">4</div><div><div class="etape-t">Démarrage de la formation</div><div class="etape-d">Rentrée septembre 2027 — Noisy-le-Sec (93130) — Île-de-France</div></div></div>
-        </div>
-        <div style="margin-top:2rem;"><a href="#candidater" class="btn-gold">Déposer ma candidature</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="entreprises">
-  <div class="inner">
-    <div class="entreprises-grid">
-      <div class="reveal">
-        <p class="tag">Espace entreprises</p>
-        <h2>Formez votre futur <em>conducteur de travaux</em></h2>
-        <p class="lead">En accueillant un alternant ABM Formation, vous recrutez un professionnel formé à vos méthodes et à vos chantiers. La formation est prise en charge par l'OPCO BTP.</p>
-        <a href="mailto:contact@abm-formation.fr" class="btn-gold">Déposer une offre d'alternance</a>
-      </div>
-      <div class="reveal">
-        <div class="avantages">
-          <div class="avantage"><div class="av-icon">🎯</div><div><div class="av-t">Un collaborateur formé à vos standards</div><div class="av-d">12 mois sur vos chantiers — il connaît vos méthodes et votre culture avant même d'être recruté</div></div></div>
-          <div class="avantage"><div class="av-icon">💼</div><div><div class="av-t">Financement OPCO BTP (Constructys)</div><div class="av-d">Les frais pédagogiques sont pris en charge — vous ne payez que le salaire de l'alternant</div></div></div>
-          <div class="avantage"><div class="av-icon">📋</div><div><div class="av-t">Accompagnement administratif complet</div><div class="av-d">ABM Formation gère l'ensemble des démarches OPCO, contrat, suivi pédagogique et session d'examen</div></div></div>
-          <div class="avantage"><div class="av-icon">🔗</div><div><div class="av-t">Suivi tripartite régulier</div><div class="av-d">Entretiens tous les 3 mois avec le tuteur entreprise et le responsable pédagogique</div></div></div>
+        <div class="cards reveal">
+          <div class="card"><div class="card-l">Titre délivré</div><div class="card-v">TP-01337 CDTBGO — Conducteur de travaux bâtiment et gros œuvre — Niveau 5</div></div>
+          <div class="card"><div class="card-l">Modalité</div><div class="card-v">Alternance — Contrat de professionnalisation — tous âges</div></div>
+          <div class="card"><div class="card-l">Rythme</div><div class="card-v">875h en centre + 910h en entreprise partenaire sur 12 mois</div></div>
+          <div class="card"><div class="card-l">Évaluation</div><div class="card-v">Mise en situation professionnelle + entretiens jury + dossier professionnel</div></div>
+          <div class="card"><div class="card-l">Certification</div><div class="card-v">Titre Professionnel d'État — Ministère du Travail — Arrêté du 19/02/2026</div></div>
+          <div class="card"><div class="card-l">Première promotion</div><div class="card-v">Septembre 2027 — Noisy-le-Sec (93130) — Île-de-France</div></div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- ACTUALITÉS -->
-<section id="actualites" style="background:var(--navy);padding:5rem 4rem;">
-  <div class="inner">
-    <div class="reveal">
-      <p class="tag">Actualités</p>
-      <h2>La vie d'<em>ABM Formation</em></h2>
-      <p style="font-size:1rem;color:var(--grey);line-height:1.7;font-weight:300;margin-bottom:3rem;max-width:580px;">Suivez les avancées du projet, les étapes de construction du centre et les premières nouvelles de nos promotions.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(200,146,42,0.1);" class="reveal">
-      <div style="background:var(--navy3);padding:2.5rem 2rem;">
-        <div style="font-size:0.7rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.8rem;">Mars 2026</div>
-        <div style="font-size:1rem;font-weight:600;color:var(--white);margin-bottom:0.6rem;">Dépôt de la déclaration d'activité</div>
-        <div style="font-size:0.85rem;color:var(--grey);line-height:1.5;">ABM Formation obtient son numéro de déclaration d'activité auprès de la DREETS Île-de-France. Première étape officielle vers l'ouverture.</div>
+  <div class="section section-dark">
+    <div class="inner">
+      <div class="reveal">
+        <p class="tag">Notre équipe pédagogique</p>
+        <h2>Formés par ceux qui <em>construisent</em></h2>
+        <p class="lead" style="font-family:var(--display);font-size:1.05rem;font-style:italic;color:rgba(255,255,255,0.8);border-left:3px solid var(--gold);padding-left:1.2rem;">"Chaque module est dispensé par un professionnel actif du BTP. Ce qui est enseigné en cours, l'alternant le retrouve sur son chantier dès la semaine suivante."</p>
       </div>
-      <div style="background:var(--navy3);padding:2.5rem 2rem;">
-        <div style="font-size:0.7rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.8rem;">Juin 2026</div>
-        <div style="font-size:1rem;font-weight:600;color:var(--white);margin-bottom:0.6rem;">Certification Qualiopi en cours</div>
-        <div style="font-size:0.85rem;color:var(--grey);line-height:1.5;">Audit de certification Qualiopi planifié. Cette certification garantit la qualité de notre programme auprès des financeurs et des entreprises partenaires.</div>
+      <div class="formateurs reveal">
+        <div class="formateur"><div class="formateur-d">Coordination · Planification</div><div class="formateur-t">Coordinateur OPC / MOEX senior</div><div class="formateur-x">10+ ans sur des chantiers hospitaliers, data centers et grands projets tertiaires IDF. MS Project, coordination multi-lots, gestion des interfaces TCE.</div></div>
+        <div class="formateur"><div class="formateur-d">Gros œuvre · Technologie</div><div class="formateur-t">Conducteur de travaux GO confirmé</div><div class="formateur-x">Spécialiste béton armé, coffrages, modes constructifs. Expérience chantiers logements collectifs et ERP. Habilitation AIPR Encadrant.</div></div>
+        <div class="formateur"><div class="formateur-d">Gestion · Finance</div><div class="formateur-t">Responsable exploitation BTP</div><div class="formateur-x">Étude de prix, DGD, gestion financière de chantier, analyse des écarts. Expérience entreprises générales IDF.</div></div>
+        <div class="formateur"><div class="formateur-d">QSE · Prévention</div><div class="formateur-t">Coordinateur SPS / Préventeur</div><div class="formateur-x">PPSPS, plan de prévention, analyse de risques, gestion déchets chantier. Habilitations AIPR et SPS niveau 1.</div></div>
+        <div class="formateur"><div class="formateur-d">BIM · Numérique</div><div class="formateur-t">BIM Manager chantier</div><div class="formateur-x">Revit, AutoCAD, coordination BIM en phase chantier, clash detection, extraction de quantitatifs.</div></div>
+        <div class="formateur"><div class="formateur-d">Droit · Marchés</div><div class="formateur-t">Juriste droit de la construction</div><div class="formateur-x">Contrats de sous-traitance, marchés publics et privés, responsabilités constructeur, garanties, contentieux.</div></div>
       </div>
-      <div style="background:var(--navy3);padding:2.5rem 2rem;border:1px dashed rgba(200,146,42,0.2);">
-        <div style="font-size:0.7rem;font-weight:600;color:rgba(200,146,42,0.5);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.8rem;">Septembre 2027</div>
-        <div style="font-size:1rem;font-weight:600;color:rgba(255,255,255,0.4);margin-bottom:0.6rem;">Première promotion</div>
-        <div style="font-size:0.85rem;color:rgba(136,150,168,0.5);line-height:1.5;">Les candidatures sont ouvertes. Rejoignez la première promotion ABM Formation et devenez l'un des premiers diplômés TP-01337 CDTBGO de notre école.</div>
-      </div>
-    </div>
-    <div style="margin-top:2rem;text-align:center;" class="reveal">
-      <p style="font-size:0.85rem;color:var(--grey);">Suivre toutes nos actualités sur <a href="https://linkedin.com/company/abm-formation-btp" target="_blank" style="color:var(--gold);text-decoration:none;font-weight:500;">LinkedIn</a></p>
     </div>
   </div>
-</section>
+</div>
 
-<section id="candidater">
-  <div class="inner">
+<!-- ══ PAGE DÉBOUCHÉS ══ -->
+<div id="page-debouches" class="page">
+  <div class="section section-dark" style="padding-top:7rem;">
+    <div class="inner">
+      <div class="reveal">
+        <p class="tag">Débouchés professionnels</p>
+        <h2>Des postes à responsabilités<br>sur les <em>grands chantiers IDF</em></h2>
+        <p class="lead">Nos diplômés accèdent directement à des postes d'encadrement dans les entreprises générales, bureaux d'études et cabinets de maîtrise d'œuvre.</p>
+      </div>
+      <div class="debouches reveal">
+        <div class="debouche"><div class="debouche-s">Entreprise générale</div><div class="debouche-p">Conducteur de travaux bâtiment</div><div class="debouche-sal">Débutant : <strong>2 400 — 3 200 € brut/mois</strong></div></div>
+        <div class="debouche"><div class="debouche-s">Bureau d'études / MOE</div><div class="debouche-p">Coordinateur OPC / MOEX</div><div class="debouche-sal">Débutant : <strong>2 200 — 3 000 € brut/mois</strong></div></div>
+        <div class="debouche"><div class="debouche-s">Gros œuvre / TCE</div><div class="debouche-p">Chef de chantier confirmé</div><div class="debouche-sal">Débutant : <strong>2 200 — 2 800 € brut/mois</strong></div></div>
+        <div class="debouche"><div class="debouche-s">Entreprise générale</div><div class="debouche-p">Assistant conducteur de travaux</div><div class="debouche-sal">Débutant : <strong>2 000 — 2 500 € brut/mois</strong></div></div>
+        <div class="debouche"><div class="debouche-s">Promoteur / MOA</div><div class="debouche-p">Chargé de suivi de chantier</div><div class="debouche-sal">Débutant : <strong>2 200 — 2 800 € brut/mois</strong></div></div>
+        <div class="debouche"><div class="debouche-s">Grand Paris · Hospitalier · Tertiaire</div><div class="debouche-p">Coordinateur de projet construction</div><div class="debouche-sal">Confirmé : <strong>3 500 — 5 000 € brut/mois</strong></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE ADMISSION ══ -->
+<div id="page-admission" class="page">
+  <div class="section section-darker" style="padding-top:7rem;">
+    <div class="inner">
+      <div class="reveal" style="margin-bottom:2.5rem;">
+        <p class="tag">Admission</p>
+        <h2>Qui peut <em>candidater</em> ?</h2>
+        <p class="lead">ABM Formation accueille les professionnels BTP en évolution, les titulaires d'un Bac professionnel et les personnes en reconversion. Ouvert à tous les âges.</p>
+      </div>
+      <div class="admission-grid">
+        <div class="reveal">
+          <div class="admission-title">Profils admis</div>
+          <div class="profils">
+            <div class="profil"><div class="profil-t">Professionnel BTP avec expérience terrain</div><div class="profil-d">Ouvrier, technicien ou chef d'équipe — 2 ans minimum d'expérience sur chantier</div></div>
+            <div class="profil"><div class="profil-t">Titulaire d'un Bac professionnel BTP</div><div class="profil-d">Bac pro bâtiment, travaux publics ou filière génie civil</div></div>
+            <div class="profil"><div class="profil-t">Professionnel en reconversion</div><div class="profil-d">Toute personne souhaitant évoluer vers la conduite de travaux — tous âges</div></div>
+          </div>
+          <div class="card"><div class="card-l">Condition avant l'examen</div><div class="card-v">Attestation <strong style="color:var(--gold);">AIPR Encadrant</strong> en cours de validité — organisée par ABM Formation en cours de formation</div></div>
+        </div>
+        <div class="reveal">
+          <div class="admission-title">Procédure d'admission</div>
+          <div class="etapes">
+            <div class="etape"><div class="etape-n">1</div><div><div class="etape-t">Dépôt du dossier de candidature</div><div class="etape-d">CV + lettre de motivation + justificatifs d'expérience ou diplôme BTP</div></div></div>
+            <div class="etape"><div class="etape-n">2</div><div><div class="etape-t">Entretien individuel de positionnement</div><div class="etape-d">Évaluation des compétences sur les 14 axes du référentiel TP-01337</div></div></div>
+            <div class="etape"><div class="etape-n">3</div><div><div class="etape-t">Signature du contrat de professionnalisation</div><div class="etape-d">Avec votre entreprise partenaire — ABM Formation vous accompagne</div></div></div>
+            <div class="etape"><div class="etape-n">4</div><div><div class="etape-t">Démarrage de la formation</div><div class="etape-d">Rentrée septembre 2027 — Noisy-le-Sec (93130) — Île-de-France</div></div></div>
+          </div>
+          <div style="margin-top:2rem;"><a href="mailto:contact@abmformation-btp.fr" class="btn-gold">Déposer ma candidature</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE ENTREPRISES ══ -->
+<div id="page-entreprises" class="page">
+  <div class="section section-dark" style="padding-top:7rem;">
+    <div class="inner">
+      <div class="entreprises-grid">
+        <div class="reveal">
+          <p class="tag">Espace entreprises</p>
+          <h2>Formez votre futur <em>conducteur de travaux</em></h2>
+          <p class="lead">En accueillant un alternant ABM Formation, vous recrutez un professionnel formé à vos méthodes et sur vos chantiers. La formation est prise en charge par l'OPCO BTP.</p>
+          <a href="mailto:contact@abmformation-btp.fr" class="btn-gold">Déposer une offre d'alternance</a>
+        </div>
+        <div class="reveal">
+          <div class="avantages">
+            <div class="avantage"><div class="av-icon">🎯</div><div><div class="av-t">Un collaborateur formé à vos standards</div><div class="av-d">12 mois sur vos chantiers — il connaît vos méthodes avant même d'être recruté</div></div></div>
+            <div class="avantage"><div class="av-icon">💼</div><div><div class="av-t">Financement OPCO BTP (Constructys)</div><div class="av-d">Les frais pédagogiques sont pris en charge — vous ne payez que le salaire de l'alternant</div></div></div>
+            <div class="avantage"><div class="av-icon">📋</div><div><div class="av-t">Accompagnement administratif complet</div><div class="av-d">ABM Formation gère l'ensemble des démarches OPCO, contrat, suivi et session d'examen</div></div></div>
+            <div class="avantage"><div class="av-icon">🔗</div><div><div class="av-t">Suivi tripartite régulier</div><div class="av-d">Entretiens tous les 3 mois avec le tuteur entreprise et le responsable pédagogique</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE CONTACT / CANDIDATER ══ -->
+<div id="page-contact" class="page">
+  <div class="cta-section" style="padding-top:7rem;min-height:60vh;display:flex;align-items:center;justify-content:center;flex-direction:column;">
     <h2>Rejoindre ABM Formation</h2>
     <p>Première promotion — Septembre 2027 — Noisy-le-Sec, Île-de-France.<br>Les candidatures sont ouvertes.</p>
-    <a href="mailto:contact@abm-formation.fr" class="btn-navy">Candidater maintenant</a>
+    <a href="mailto:contact@abmformation-btp.fr" class="btn-navy">Candidater maintenant</a>
   </div>
-</section>
 
-<section id="contact-bar">
-  <div class="contact-inner">
-    <div>
-      <div class="contact-name">ABM Formation</div>
-      <div class="contact-role">École de conduite de travaux BTP — Île-de-France</div>
-    </div>
-    <div class="contact-items">
-      <div><div class="contact-item-l">Téléphone</div><div class="contact-item-v">06 64 89 94 09</div></div>
-      <div><div class="contact-item-l">Email</div><div class="contact-item-v">contact@abm-formation.fr</div></div>
-      <div><div class="contact-item-l">Adresse</div><div class="contact-item-v">Noisy-le-Sec — 93130 — Île-de-France</div></div>
+  <div class="contact-bar">
+    <div class="contact-inner">
+      <div>
+        <div class="contact-name">ABM Formation</div>
+        <div class="contact-role">École de conduite de travaux BTP — Île-de-France</div>
+      </div>
+      <div class="contact-items">
+        <div><div class="contact-item-l">Téléphone</div><div class="contact-item-v">06 64 89 94 09</div></div>
+        <div><div class="contact-item-l">Email</div><div class="contact-item-v">contact@abmformation-btp.fr</div></div>
+        <div><div class="contact-item-l">Adresse</div><div class="contact-item-v">Noisy-le-Sec — 93130 — IDF</div></div>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- FOOTER PRINCIPAL -->
+  <!-- MENTIONS LÉGALES -->
+  <div class="legal-section">
+    <div class="inner">
+      <p class="tag" style="margin-bottom:1.5rem;">Mentions légales</p>
+      <div class="legal-grid">
+        <div class="legal-block"><div class="legal-title">Éditeur</div><div class="legal-content"><strong>ABM Formation</strong> — Auto-entrepreneur<br>SIREN : 943 293 209 — APE 8559B<br>Noisy-le-Sec (93130) — Île-de-France<br>contact@abmformation-btp.fr<br>Responsable publication : M. ABBAR</div></div>
+        <div class="legal-block"><div class="legal-title">Hébergement</div><div class="legal-content"><strong>GitHub, Inc.</strong><br>88 Colin P Kelly Jr St, San Francisco, CA 94107<br>github.com</div></div>
+        <div class="legal-block"><div class="legal-title">Propriété intellectuelle</div><div class="legal-content">L'ensemble du contenu de ce site est la propriété exclusive d'<strong>ABM Formation</strong>. Toute reproduction sans autorisation écrite préalable est interdite — art. L.335-2 CPI.</div></div>
+        <div class="legal-block"><div class="legal-title">Données personnelles (RGPD)</div><div class="legal-content">Aucune donnée collectée automatiquement. Données de contact conservées 3 ans. Droits : accès, rectification, effacement — <strong>contact@abmformation-btp.fr</strong>. Réclamation : cnil.fr</div></div>
+        <div class="legal-block"><div class="legal-title">Cookies</div><div class="legal-content">Site statique — aucun cookie déposé par défaut. Google Fonts peut déposer des cookies de mesure d'audience anonymisée.</div></div>
+        <div class="legal-block"><div class="legal-title">Droit applicable</div><div class="legal-content">Droit français. Tribunal compétent : Bobigny (93).</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="legal-bar">
+    <p>© 2026 ABM Formation — M. ABBAR — SIREN 943 293 209 — Tous droits réservés<br>Protégé par le droit d'auteur français (Loi n°92-597) — RGPD (UE) 2016/679</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-logo">ABM <span>Formation</span></div>
-  <div class="footer-info">
-    TP-01337 CDTBGO — Niveau 5 — SIREN 943 293 209<br>
-    © ABM Formation 2026 — Tous droits réservés
-  </div>
+  <div class="footer-info">TP-01337 CDTBGO — Niveau 5 — © ABM Formation 2026</div>
   <div class="footer-links">
-    <a href="#mentions">Mentions légales</a>
-    <a href="#cgu">CGU</a>
-    <a href="#confidentialite">Confidentialité</a>
-    <a href="#cookies">Cookies</a>
+    <a href="#" onclick="showPage('contact')">Mentions légales</a>
+    <a href="#" onclick="showPage('contact')">Confidentialité</a>
+    <a href="#" onclick="showPage('contact')">Cookies</a>
   </div>
 </footer>
 
-<!-- MENTIONS LÉGALES -->
-<section id="mentions" style="background:var(--navy2);padding:5rem 4rem;">
-  <div class="inner">
-    <p class="tag">Informations légales</p>
-    <h2 style="font-size:1.8rem;margin-bottom:2rem;">Mentions <em>légales</em></h2>
-
-    <div class="legal-grid">
-      <div class="legal-block">
-        <div class="legal-title">Éditeur du site</div>
-        <div class="legal-content">
-          <strong>ABM Formation</strong><br>
-          Auto-entrepreneur — Micro-entreprise<br>
-          SIREN : 943 293 209<br>
-          Code APE : 8559B — Formation professionnelle continue<br>
-          Adresse : Noisy-le-Sec (93130) — Île-de-France<br>
-          Téléphone : +33 6 64 89 94 09<br>
-          Email : contact@abm-formation.fr<br>
-          Responsable de la publication : Marwane ABBAR
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Hébergement</div>
-        <div class="legal-content">
-          Ce site est hébergé par :<br>
-          <strong>GitHub, Inc.</strong><br>
-          88 Colin P Kelly Jr St, San Francisco, CA 94107, USA<br>
-          Site : github.com<br><br>
-          Nom de domaine enregistré auprès d'un registrar accrédité ICANN.
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Propriété intellectuelle</div>
-        <div class="legal-content">
-          L'ensemble du contenu de ce site (textes, visuels, structure, code, marque ABM Formation) est la propriété exclusive de <strong>ABM Formation — Marwane ABBAR</strong> et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle.<br><br>
-          Toute reproduction, représentation, modification, publication, adaptation totale ou partielle des éléments du site, quel que soit le moyen ou le procédé utilisé, est strictement interdite sans l'autorisation écrite préalable de ABM Formation.<br><br>
-          Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient constitue une contrefaçon et sera poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de la Propriété Intellectuelle.
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Marque et dénomination</div>
-        <div class="legal-content">
-          La dénomination <strong>« ABM Formation »</strong>, le logo et tous les signes distinctifs associés sont la propriété exclusive de Marwane ABBAR.<br><br>
-          Toute utilisation de ces éléments sans autorisation écrite préalable est interdite et constitue une violation des droits de propriété intellectuelle susceptible d'engager la responsabilité civile et pénale de son auteur.
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Responsabilité</div>
-        <div class="legal-content">
-          ABM Formation s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, ABM Formation ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition. ABM Formation décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des informations disponibles sur ce site.<br><br>
-          Les informations contenues dans ce site ne sont pas contractuelles et sont susceptibles d'évoluer.
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Droit applicable</div>
-        <div class="legal-content">
-          Le présent site et ses contenus sont régis par le droit français. En cas de litige, les tribunaux français seront seuls compétents. Le Tribunal compétent est celui de Bobigny (Seine-Saint-Denis — 93).
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CGU -->
-<section id="cgu" style="background:var(--navy3);padding:5rem 4rem;">
-  <div class="inner">
-    <p class="tag">Conditions générales</p>
-    <h2 style="font-size:1.8rem;margin-bottom:2rem;">Conditions Générales <em>d'Utilisation</em></h2>
-
-    <div class="legal-grid">
-      <div class="legal-block">
-        <div class="legal-title">Acceptation des conditions</div>
-        <div class="legal-content">
-          L'utilisation du site abm-formation.fr implique l'acceptation pleine et entière des présentes conditions générales d'utilisation. Ces conditions d'utilisation sont susceptibles d'être modifiées ou complétées à tout moment. Les utilisateurs du site sont donc invités à les consulter de manière régulière.
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Accès au site</div>
-        <div class="legal-content">
-          Le site est accessible gratuitement à tout utilisateur disposant d'un accès à Internet. Tous les frais supportés par l'utilisateur pour accéder au service (matériel informatique, logiciels, connexion Internet) sont à sa charge. ABM Formation se réserve le droit de suspendre, d'interrompre ou de limiter l'accès au site à tout moment.
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Contenu du site</div>
-        <div class="legal-content">
-          Les informations et documents contenus dans ce site sont fournis à titre indicatif. ABM Formation ne saurait être tenu responsable de l'utilisation faite des informations et documents du site.<br><br>
-          Les candidatures et contacts effectués via ce site ne constituent pas un engagement contractuel de la part d'ABM Formation. Tout engagement est formalisé par un contrat écrit signé par les deux parties.
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Comportement des utilisateurs</div>
-        <div class="legal-content">
-          Il est interdit d'utiliser ce site à des fins illicites ou contraires aux présentes CGU. Il est notamment interdit de tenter d'accéder de manière non autorisée à une partie du site, d'introduire des virus ou tout autre code malveillant, ou de tenter de déstabiliser le fonctionnement du site. Tout manquement à ces règles pourra donner lieu à des poursuites judiciaires.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- POLITIQUE DE CONFIDENTIALITÉ -->
-<section id="confidentialite" style="background:var(--navy2);padding:5rem 4rem;">
-  <div class="inner">
-    <p class="tag">Protection des données</p>
-    <h2 style="font-size:1.8rem;margin-bottom:2rem;">Politique de <em>confidentialité</em></h2>
-    <p style="font-size:0.85rem;color:var(--grey);margin-bottom:2rem;">Conformément au Règlement (UE) 2016/679 (RGPD) et à la loi n°78-17 du 6 janvier 1978 modifiée (Loi Informatique et Libertés)</p>
-
-    <div class="legal-grid">
-      <div class="legal-block">
-        <div class="legal-title">Responsable du traitement</div>
-        <div class="legal-content">
-          <strong>Marwane ABBAR — ABM Formation</strong><br>
-          Noisy-le-Sec (93130) — Île-de-France<br>
-          Email : contact@abm-formation.fr<br>
-          Téléphone : +33 6 64 89 94 09
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Données collectées</div>
-        <div class="legal-content">
-          Ce site ne collecte aucune donnée personnelle de manière automatique.<br><br>
-          Les données transmises volontairement via les liens de contact (nom, prénom, email, téléphone, message) sont uniquement utilisées pour répondre à votre demande et ne sont jamais cédées à des tiers.<br><br>
-          Si vous activez Google Analytics, des données de navigation anonymisées sont collectées (pages visitées, durée de session, origine géographique approximative). Ces données ne permettent pas de vous identifier personnellement.
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Base légale et finalités</div>
-        <div class="legal-content">
-          Les traitements de données effectués sont fondés sur :<br><br>
-          • Le <strong>consentement</strong> (art. 6.1.a RGPD) pour les cookies analytiques optionnels<br>
-          • L'<strong>intérêt légitime</strong> (art. 6.1.f RGPD) pour la réponse aux demandes de contact<br>
-          • L'<strong>exécution d'un contrat</strong> (art. 6.1.b RGPD) pour les candidats et entreprises partenaires
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Durée de conservation</div>
-        <div class="legal-content">
-          Les données de contact sont conservées pendant <strong>3 ans</strong> à compter du dernier contact.<br>
-          Les données liées aux contrats de formation sont conservées pendant <strong>5 ans</strong> conformément aux obligations légales.<br>
-          Les données analytiques sont conservées <strong>26 mois</strong> maximum.
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Vos droits</div>
-        <div class="legal-content">
-          Conformément au RGPD, vous disposez des droits suivants :<br><br>
-          • <strong>Droit d'accès</strong> — consulter vos données<br>
-          • <strong>Droit de rectification</strong> — corriger vos données<br>
-          • <strong>Droit à l'effacement</strong> — supprimer vos données<br>
-          • <strong>Droit d'opposition</strong> — vous opposer à un traitement<br>
-          • <strong>Droit à la portabilité</strong> — récupérer vos données<br>
-          • <strong>Droit de limitation</strong> — limiter un traitement<br><br>
-          Pour exercer ces droits : <strong>contact@abm-formation.fr</strong><br>
-          Réponse garantie sous <strong>30 jours</strong>.<br><br>
-          En cas de réclamation non résolue, vous pouvez saisir la <strong>CNIL</strong> : cnil.fr
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Sécurité des données</div>
-        <div class="legal-content">
-          ABM Formation met en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données contre toute perte, destruction, divulgation ou accès non autorisé.<br><br>
-          Ce site est hébergé sur une infrastructure sécurisée (GitHub Pages) avec connexion HTTPS obligatoire. Aucune donnée sensible n'est stockée sur le site.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- POLITIQUE COOKIES -->
-<section id="cookies" style="background:var(--navy3);padding:5rem 4rem;">
-  <div class="inner">
-    <p class="tag">Cookies</p>
-    <h2 style="font-size:1.8rem;margin-bottom:2rem;">Politique relative aux <em>cookies</em></h2>
-
-    <div class="legal-grid">
-      <div class="legal-block">
-        <div class="legal-title">Qu'est-ce qu'un cookie ?</div>
-        <div class="legal-content">
-          Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette, smartphone) lors de la visite d'un site web. Il permet au site de mémoriser des informations sur votre visite.
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Cookies utilisés sur ce site</div>
-        <div class="legal-content">
-          <strong>Cookies strictement nécessaires :</strong> Ce site n'utilise aucun cookie strictement nécessaire à son fonctionnement. Le site est entièrement statique.<br><br>
-          <strong>Cookies analytiques (optionnels) :</strong> Si activé, Google Analytics dépose des cookies pour mesurer l'audience du site de manière anonymisée. Ces cookies ne sont pas activés par défaut.<br><br>
-          <strong>Cookies tiers :</strong> Les polices Google Fonts sont chargées depuis les serveurs Google. Google peut déposer des cookies de mesure d'audience. Consulter la politique de confidentialité de Google pour plus d'informations.
-        </div>
-      </div>
-
-      <div class="legal-block">
-        <div class="legal-title">Gérer vos préférences</div>
-        <div class="legal-content">
-          Vous pouvez à tout moment paramétrer votre navigateur pour refuser les cookies. La procédure dépend de votre navigateur :<br><br>
-          • <strong>Chrome</strong> : Paramètres → Confidentialité → Cookies<br>
-          • <strong>Firefox</strong> : Paramètres → Vie privée → Cookies<br>
-          • <strong>Safari</strong> : Préférences → Confidentialité<br>
-          • <strong>Edge</strong> : Paramètres → Confidentialité<br><br>
-          Le refus des cookies n'affecte pas la navigation sur ce site.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BARRE LÉGALE FINALE -->
-<div style="background:var(--navy2);padding:1.5rem 4rem;border-top:1px solid rgba(200,146,42,0.1);text-align:center;">
-  <p style="font-size:0.75rem;color:var(--grey);line-height:1.8;">
-    © 2026 ABM Formation — Marwane ABBAR — SIREN 943 293 209 — Tous droits réservés — Reproduction interdite sans autorisation écrite<br>
-    Site protégé par le droit d'auteur français (Code de la Propriété Intellectuelle) — Loi n°92-597 du 1er juillet 1992<br>
-    Données personnelles protégées conformément au RGPD (UE) 2016/679 et à la loi Informatique et Libertés n°78-17
-  </p>
-</div>
-
-<style>
-  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-  .footer-links a { font-size: 0.75rem; color: var(--grey); text-decoration: none; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--gold); }
-  .legal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .legal-block { background: var(--navy); border-left: 3px solid rgba(200,146,42,0.3); padding: 1.5rem 1.8rem; }
-  .legal-title { font-size: 0.78rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.8rem; }
-  .legal-content { font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.7; }
-  .legal-content strong { color: var(--white); }
-  @media (max-width: 760px) { .legal-grid { grid-template-columns: 1fr; } .footer-links { gap: 1rem; } }
-</style>
-
 <script>
-  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('in'); }), { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
+  const page = document.getElementById('page-' + id);
+  if (page) { page.classList.add('active'); window.scrollTo(0,0); }
+  const navLink = document.getElementById('nav-' + id);
+  if (navLink) navLink.classList.add('active');
+}
+
+function toggleMobile() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+document.addEventListener('click', function(e) {
+  const menu = document.getElementById('mobileMenu');
+  if (!menu.contains(e.target) && !e.target.closest('.hamburger')) {
+    menu.classList.remove('open');
+  }
+});
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
