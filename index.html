@@ -273,23 +273,23 @@ footer { background: var(--navy2); padding: 1.5rem 4.5rem; display: flex; justif
     <span class="nav-logo-text">ABM <span>Formation</span></span>
   </div>
   <ul class="nav-links">
-    <li><a onclick="showPage('home')" id="nav-home" class="active-nav">Accueil</a></li>
-    <li><a onclick="showPage('formation')" id="nav-formation">La formation</a></li>
-    <li><a onclick="showPage('debouches')" id="nav-debouches">Débouchés</a></li>
-    <li><a onclick="showPage('admission')" id="nav-admission">Admission</a></li>
-    <li><a onclick="showPage('entreprises')" id="nav-entreprises">Entreprises</a></li>
-    <li><a onclick="showPage('candidater')" id="nav-candidater" class="btn-nav">Candidater</a></li>
+    <li><a onclick="showPage('home');history.pushState(null,'','#accueil')" id="nav-home" class="active-nav">Accueil</a></li>
+    <li><a onclick="showPage('formation');history.pushState(null,'','#formation')" id="nav-formation">La formation</a></li>
+    <li><a onclick="showPage('debouches');history.pushState(null,'','#debouches')" id="nav-debouches">Débouchés</a></li>
+    <li><a onclick="showPage('admission');history.pushState(null,'','#admission')" id="nav-admission">Admission</a></li>
+    <li><a onclick="showPage('entreprises');history.pushState(null,'','#entreprises')" id="nav-entreprises">Entreprises</a></li>
+    <li><a onclick="showPage('candidater');history.pushState(null,'','#candidater')" id="nav-candidater" class="btn-nav">Candidater</a></li>
   </ul>
   <div class="hamburger" onclick="toggleMobile()"><span></span><span></span><span></span></div>
 </nav>
 
 <div class="mobile-nav" id="mobileNav">
-  <a onclick="showPage('home');toggleMobile()">Accueil</a>
-  <a onclick="showPage('formation');toggleMobile()">La formation</a>
-  <a onclick="showPage('debouches');toggleMobile()">Débouchés</a>
-  <a onclick="showPage('admission');toggleMobile()">Admission</a>
-  <a onclick="showPage('entreprises');toggleMobile()">Entreprises</a>
-  <a onclick="showPage('candidater');toggleMobile()">Candidater →</a>
+  <a onclick="showPage('home');history.pushState(null,'','#accueil');toggleMobile()">Accueil</a>
+  <a onclick="showPage('formation');history.pushState(null,'','#formation');toggleMobile()">La formation</a>
+  <a onclick="showPage('debouches');history.pushState(null,'','#debouches');toggleMobile()">Débouchés</a>
+  <a onclick="showPage('admission');history.pushState(null,'','#admission');toggleMobile()">Admission</a>
+  <a onclick="showPage('entreprises');history.pushState(null,'','#entreprises');toggleMobile()">Entreprises</a>
+  <a onclick="showPage('candidater');history.pushState(null,'','#candidater');toggleMobile()">Candidater →</a>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -313,7 +313,7 @@ footer { background: var(--navy2); padding: 1.5rem 4.5rem; display: flex; justif
         <span class="hero-tag">Formation professionnalisante</span>
         <span class="hero-tag">Terrain</span>
         <span class="hero-tag">Responsabilité</span>
-        <span class="hero-tag">100 % financé</span>
+        <span class="hero-tag">Financement OPCO BTP</span>
         <span class="hero-tag">Admission sur dossier et entretien</span>
         <span class="hero-tag" style="border-color:rgba(184,133,30,0.6);background:rgba(184,133,30,0.12)">Places limitées — Première promotion</span>
       </div>
@@ -325,7 +325,7 @@ footer { background: var(--navy2); padding: 1.5rem 4.5rem; display: flex; justif
     <div class="hero-right">
       <div class="hero-card"><div class="hero-card-label">Titre délivré</div><div class="hero-card-value">TP-01337 CDTBGO</div><div class="hero-card-sub">Arrêté du 19/02/2026 — Ministère du Travail</div></div>
       <div class="hero-card"><div class="hero-card-label">Durée de formation</div><div class="hero-card-value">12 mois en alternance</div><div class="hero-card-sub">875 h en centre · 910 h en entreprise</div></div>
-      <div class="hero-card"><div class="hero-card-label">Financement</div><div class="hero-card-value">100 % OPCO BTP</div><div class="hero-card-sub">Zéro frais pour l'apprenant</div></div>
+      <div class="hero-card"><div class="hero-card-label">Financement</div><div class="hero-card-value">Financement OPCO BTP</div><div class="hero-card-sub">Aucun coût pédagogique pour l'apprenant</div></div>
       <div class="hero-card"><div class="hero-card-label">Première promotion</div><div class="hero-card-value">Septembre 2027</div><div class="hero-card-sub">Noisy-le-Sec — Seine-Saint-Denis — Île-de-France</div></div>
     </div>
   </div>
@@ -334,7 +334,7 @@ footer { background: var(--navy2); padding: 1.5rem 4.5rem; display: flex; justif
   <div style="background:var(--gold);padding:0.9rem 4.5rem">
     <div style="max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
       <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;font-weight:600;color:var(--navy);margin:0">
-        Plusieurs entreprises BTP en Île-de-France participent déjà à la constitution de la première promotion.
+        Partenariats en cours avec des entreprises du BTP francilien pour la première promotion.
       </p>
       <button onclick="showPage('entreprises')" style="background:var(--navy);color:var(--white);border:none;padding:0.5rem 1.2rem;font-size:0.78rem;font-weight:600;cursor:pointer;font-family:var(--body);white-space:nowrap">Devenir partenaire →</button>
     </div>
@@ -368,7 +368,7 @@ footer { background: var(--navy2); padding: 1.5rem 4.5rem; display: flex; justif
     <div class="stat-item"><div class="stat-num">875 h</div><div class="stat-label">En centre de formation</div></div>
     <div class="stat-item"><div class="stat-num">910 h</div><div class="stat-label">En entreprise partenaire</div></div>
     <div class="stat-item"><div class="stat-num">100 %</div><div class="stat-label">Financé par l'OPCO BTP</div></div>
-    <div class="stat-item"><div class="stat-num">0 €</div><div class="stat-label">Pour l'apprenant</div></div>
+    <div class="stat-item"><div class="stat-num">0 €</div><div class="stat-label">Coût pédagogique pour l'apprenant</div></div>
   </div>
 
   <div class="divider-gold"></div>
@@ -451,7 +451,7 @@ footer { background: var(--navy2); padding: 1.5rem 4.5rem; display: flex; justif
         </div>
         <div class="avantages reveal d2">
           <div class="avantage"><div class="av-num">01</div><div><div class="av-title">Recrutez votre futur conducteur de travaux</div><div class="av-desc">L'alternant est formé à vos méthodes et sur vos chantiers pendant 12 mois avant d'être recruté.</div></div></div>
-          <div class="avantage"><div class="av-num">02</div><div><div class="av-title">Zéro frais pédagogiques</div><div class="av-desc">L'OPCO BTP (Constructys) prend en charge l'intégralité des frais de formation.</div></div></div>
+          <div class="avantage"><div class="av-num">02</div><div><div class="av-title">Aucun coût pédagogique pour l'entreprise</div><div class="av-desc">Les frais pédagogiques sont pris en charge par l'OPCO BTP (Constructys), sans incidence financière pour l'entreprise accueillante.</div></div></div>
           <div class="avantage"><div class="av-num">03</div><div><div class="av-title">Accompagnement complet</div><div class="av-desc">ABM Formation gère toutes les démarches administratives OPCO, contrat et suivi pédagogique.</div></div></div>
         </div>
       </div>
@@ -520,7 +520,7 @@ footer { background: var(--navy2); padding: 1.5rem 4.5rem; display: flex; justif
           <div class="info-card"><div class="info-card-label">Titre délivré</div><div class="info-card-value">TP-01337 CDTBGO — Conducteur de travaux du bâtiment et du gros œuvre — Niveau 5</div></div>
           <div class="info-card"><div class="info-card-label">Modalité</div><div class="info-card-value">Alternance — Contrat de professionnalisation — ouvert à tous les âges</div></div>
           <div class="info-card"><div class="info-card-label">Rythme</div><div class="info-card-value">875 h en centre + 910 h en entreprise partenaire sur 12 mois</div></div>
-          <div class="info-card"><div class="info-card-label">Financement</div><div class="info-card-value">100 % OPCO BTP (Constructys) — Zéro frais pour l'apprenant</div></div>
+          <div class="info-card"><div class="info-card-label">Financement</div><div class="info-card-value">Prise en charge intégrale par l'OPCO BTP (Constructys) — Aucun coût pédagogique pour l'apprenant</div></div>
           <div class="info-card"><div class="info-card-label">Outils enseignés</div><div class="info-card-value">MS Project · AutoCAD · Revit BIM · Excel · Logiciel d'étude de prix</div></div>
           <div class="info-card"><div class="info-card-label">Évaluation</div><div class="info-card-value">Mise en situation professionnelle · Entretiens devant jury · Dossier professionnel</div></div>
           <div class="info-card"><div class="info-card-label">Certification</div><div class="info-card-value">Arrêté du 19/02/2026 — JO du 26/02/2026 — Date d'effet : 21/10/2026</div></div>
@@ -566,6 +566,7 @@ footer { background: var(--navy2); padding: 1.5rem 4.5rem; display: flex; justif
     <div style="max-width:1120px;margin:0 auto;padding:4rem 4.5rem 3.5rem" class="reveal">
       <p class="eyebrow">Admission</p>
       <h2 class="light">Qui peut <em>candidater</em> ?</h2>
+      <p style="font-family:var(--display);font-size:1rem;font-style:italic;color:rgba(255,255,255,0.5);margin-top:0.5rem">Processus de sélection exigeant — Admission sur dossier et entretien individuel.</p>
       <div style="display:inline-flex;align-items:center;gap:0.6rem;padding:0.4rem 1rem;border:1px solid rgba(184,133,30,0.4);background:rgba(184,133,30,0.08);margin-top:1rem"><span style="font-size:0.7rem;font-weight:600;color:var(--gold);letter-spacing:0.1em">Places limitées pour la première promotion — Admission sur dossier et entretien</span></div>
       <p style="font-size:0.92rem;color:rgba(255,255,255,0.45);font-weight:300;max-width:520px;line-height:1.8">ABM Formation accueille les professionnels du BTP en évolution, les titulaires d'un baccalauréat professionnel et les personnes en reconversion. La formation est ouverte à tous les âges.</p>
     </div>
@@ -892,7 +893,7 @@ footer { background: var(--navy2); padding: 1.5rem 4.5rem; display: flex; justif
   </div>
   <footer>
     <div class="footer-logo">ABM <span>Formation</span></div>
-    <div class="footer-info">TP-01337 CDTBGO — Niveau 5 — © ABM Formation 2026</div>
+    <div class="footer-info">École de conduite de travaux BTP — Île-de-France — TP-01337 CDTBGO — Niveau 5<br>Formation en alternance BTP IDF — Conducteur de travaux — © ABM Formation 2026</div>
     <div class="footer-links">
       <a onclick="showLegal()">Mentions légales</a>
       <a onclick="showLegal()">Confidentialité</a>
@@ -1024,6 +1025,14 @@ function initReveal() {
   document.querySelectorAll('.reveal:not(.in)').forEach(el => obs.observe(el));
 }
 initReveal();
+
+// Lecture du hash à l'ouverture
+(function() {
+  const hash = window.location.hash.replace('#','');
+  const map = {'accueil':'home','formation':'formation','debouches':'debouches',
+               'admission':'admission','entreprises':'entreprises','candidater':'candidater'};
+  if (hash && map[hash]) showPage(map[hash]);
+})();
 </script>
 </body>
 </html>
