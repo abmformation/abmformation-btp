@@ -112,3 +112,11 @@ caption{text-align:left;font-weight:600;color:var(--navy);padding:0 0 10px}
 .brand.light{color:#fff;margin-bottom:14px}
 .fh{font-family:Inter,sans-serif;font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
 .fine{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:18px;font-size:13px}
+.qa{background:var(--card);border:1px solid var(--line);margin:0 0 10px}
+.qa summary{cursor:pointer;padding:16px 44px 16px 18px;font-weight:600;color:var(--navy);list-style:none;position:relative}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary:after{content:"+";position:absolute;right:18px;top:12px;font-size:24px;color:var(--gold);font-weight:400}
+.qa[open] summary:after{content:"–"}
+.qa div{padding:0 18px 16px;color:#3B4456}
+a.card.dl{text-decoration:none;color:var(--ink);display:block}
+a.card.dl:hover{border-color:var(--gold);box-shadow:0 4px 18px rgba(14,30,58,.08)}
