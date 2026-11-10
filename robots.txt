@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://abmformation-btp.fr/sitemap.xml
