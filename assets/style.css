@@ -120,3 +120,9 @@ caption{text-align:left;font-weight:600;color:var(--navy);padding:0 0 10px}
 .qa div{padding:0 18px 16px;color:#3B4456}
 a.card.dl{text-decoration:none;color:var(--ink);display:block}
 a.card.dl:hover{border-color:var(--gold);box-shadow:0 4px 18px rgba(14,30,58,.08)}
+.support{text-align:center;border-top:1px solid var(--line)}
+.support h2{margin-bottom:24px}
+.logocard{display:inline-block;background:#fff;border:1px solid var(--line);padding:22px 36px}
+.logocard img{display:block;height:64px;width:auto}
+.support p:last-child{max-width:640px;margin:24px auto 0;color:var(--muted)}
+@media (max-width:520px){.logocard{padding:16px 22px}.logocard img{height:46px}}
